@@ -57,12 +57,8 @@
       "ItemId": "6725f88e-8e9a-4c01-8f0d-9dd161e771b1"
     },
     {
-      "ItemId": "3e2edd4e-2c8d-49ce-88df-98f07c254725",
-      "PreviousItemId": "6725f88e-8e9a-4c01-8f0d-9dd161e771b1"
-    },
-    {
       "ItemId": "f88cba0e-4851-4f97-b1d8-ede6638b8d7d",
-      "PreviousItemId": "3e2edd4e-2c8d-49ce-88df-98f07c254725"
+      "PreviousItemId": "6725f88e-8e9a-4c01-8f0d-9dd161e771b1"
     }
   ],
   "HandledEvents": [
@@ -96,6 +92,22 @@
       ],
       "TypeName": "System.Guid",
       "Value": "new System.Guid(\"95941D76-0F6B-4E58-A6BD-B11654FEB350\")"
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "GetAutotexts",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "usageAreaGuid",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Linq.IQueryable<global::mtg.AutotextsModule.IAutotext>",
+      "ReturnTypeFullName": "System.Linq.IQueryable"
     }
   ],
   "PublicStructures": [],
