@@ -19,5 +19,14 @@ namespace mtg.AutotextsModule.Constants
     }
     
     #endregion
+    
+    #region
+    public static class UsageAreaGuid
+    {
+       // GUID области использования "Задача на согласование".
+      [Sungero.Core.Public]
+      public const string ApprovalTaskUsageArea = "632E88E8-1E42-48A5-8B46-5E98E6A5E948";
+    }
+    #endregion
   }
 }

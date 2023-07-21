@@ -70,4 +70,7 @@
   <data name="DescriptionAutotextsCreateRole" xml:space="preserve">
     <value>Autotexts creation</value>
   </data>
+  <data name="ApprovalTaskUsageAreaName" xml:space="preserve">
+    <value>Approval task</value>
+  </data>
 </root>

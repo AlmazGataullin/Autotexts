@@ -70,4 +70,7 @@
   <data name="DescriptionAutotextsCreateRole" xml:space="preserve">
     <value>Создание автотекстов</value>
   </data>
+  <data name="ApprovalTaskUsageAreaName" xml:space="preserve">
+    <value>Задача на согласование</value>
+  </data>
 </root>

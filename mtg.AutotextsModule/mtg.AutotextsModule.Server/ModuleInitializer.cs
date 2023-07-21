@@ -16,6 +16,10 @@ namespace mtg.AutotextsModule.Server
       InitializationLogger.Debug("Init: Create roles.");
       CreateRoles();
       
+      // Создание областей использования.
+      InitializationLogger.Debug("Init: Create usage areas.");
+      CreateUsageAreas();
+      
       //Выдача прав роли "Использование автотекстов".
       InitializationLogger.Debug("Init: Grant rights on usage of autotexts.");
       GrantRightsToAutotextsUseRole();
@@ -35,6 +39,38 @@ namespace mtg.AutotextsModule.Server
       Sungero.Docflow.PublicInitializationFunctions.Module.CreateRole(Resources.RoleNameAutotextsUse, Resources.DescriptionAutotextsUseRole, Constants.Module.RoleGuid.AutotextsUseRole);
       Sungero.Docflow.PublicInitializationFunctions.Module.CreateRole(Resources.RoleNameAutotextsCreate, Resources.DescriptionAutotextsCreateRole, Constants.Module.RoleGuid.AutotextsCreateRole);
       
+    }
+    
+    
+    public static void CreateUsageAreas()
+    {
+      InitializationLogger.Debug("Init: Create usage areas.");
+      CreateUsageArea(Resources.ApprovalTaskUsageAreaName, mtg.AutotextsModule.PublicConstants.Module.UsageAreaGuid.ApprovalTaskUsageArea);
+    }
+    
+    public static void CreateUsageArea(string name, string guid)
+    {
+      InitializationLogger.DebugFormat("Init: Create AutotextUsageArea {0}", name);
+      var usageArea = AutotextUsageAreas.GetAll(r => r.Guid == guid).FirstOrDefault();
+      
+      if (usageArea == null)
+      {
+        usageArea = AutotextUsageAreas.Create();
+        usageArea.Name = name;
+        usageArea.Guid = guid;
+        usageArea.Save();
+      }
+      else
+      {
+        if (usageArea.Name != name)
+        {
+          InitializationLogger.DebugFormat("AutotextUsageArea '{0}'(Sid = {1}) renamed as '{2}'", usageArea.Name, usageArea.Guid, name);
+          usageArea.Name = name;
+          usageArea.Save();
+        }
+        
+      }
+      return;
     }
     
     /// <summary>

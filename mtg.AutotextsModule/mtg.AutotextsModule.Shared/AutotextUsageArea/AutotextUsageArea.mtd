@@ -4,6 +4,7 @@
   "Name": "AutotextUsageArea",
   "BaseGuid": "04581d26-0780-4cfd-b3cd-c2cafc5798b0",
   "CanBeNavigationPropertyType": true,
+  "CanBeSearch": false,
   "CanBeUsedInIntegration": true,
   "Code": "AutotextUsageA",
   "CreationAreaMetadata": {
@@ -42,12 +43,23 @@
           "RowNumber": 0,
           "RowSpan": 1,
           "Settings": []
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "3e7d9840-4472-4857-ba8e-ed54d707b44c",
+          "Name": "Control1",
+          "ColumnNumber": 0,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
+          "ParentGuid": "3bc3034c-bec5-4634-8385-27c2c11bc145",
+          "PropertyGuid": "93db68ed-cb2f-44a3-839e-8872dbbf671a",
+          "RowNumber": 1,
+          "RowSpan": 1,
+          "Settings": []
         }
       ]
     }
   ],
-  "HideFromCreationArea": true,
-  "HideFromNavigationEditorCreationArea": true,
   "IconResourcesKeys": [],
   "IntegrationServiceName": "AutotextsModuleAutotextUsageArea",
   "IsAutoCreated": true,
@@ -58,7 +70,8 @@
     "HideFromCreationArea",
     "HideFromNavigationEditorCreationArea",
     "IsAutoCreated",
-    "CanBeUsedInIntegration"
+    "CanBeUsedInIntegration",
+    "CanBeSearch"
   ],
   "Properties": [
     {
@@ -78,6 +91,7 @@
       "Name": "Guid",
       "CanBeSearch": false,
       "Code": "Guid",
+      "IsEnabled": false,
       "IsRequired": true,
       "IsShowedInList": false,
       "IsVisibility": false,

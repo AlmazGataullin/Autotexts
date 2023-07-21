@@ -76,6 +76,15 @@
   ],
   "PublicConstants": [
     {
+      "Name": "ApprovalTaskUsageArea",
+      "ParentClasses": [
+        "Module",
+        "UsageAreaGuid"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"632E88E8-1E42-48A5-8B46-5E98E6A5E948\""
+    },
+    {
       "Name": "AutotextsCreateRole",
       "ParentClasses": [
         "Module",
@@ -117,7 +126,8 @@
     "RoleNameAutotextsUse",
     "RoleNameAutotextsCreate",
     "DescriptionAutotextsUseRole",
-    "DescriptionAutotextsCreateRole"
+    "DescriptionAutotextsCreateRole",
+    "ApprovalTaskUsageAreaName"
   ],
   "ServerAssemblyName": "mtg.AutotextsModule.Server",
   "ServerNamespace": "mtg.AutotextsModule.Server",
