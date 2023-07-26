@@ -70,7 +70,6 @@ namespace mtg.AutotextsModule.Server
         }
         
       }
-      return;
     }
     
     /// <summary>
