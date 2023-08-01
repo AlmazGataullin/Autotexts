@@ -15,6 +15,7 @@ namespace mtg.AutotextsModule.Server
     [Public, Remote]
     public static IQueryable<IAutotext> GetAutotexts(string usageAreaGuid)
     {
+      //TODO В текущем варианте пользователю доступны все автотексты сооветствующей области. При 
       var query = Autotexts.GetAll(x => x.Status == mtg.AutotextsModule.Autotext.Status.Active && Equals(x.UsageArea.Guid, usageAreaGuid));
       
       return query;
