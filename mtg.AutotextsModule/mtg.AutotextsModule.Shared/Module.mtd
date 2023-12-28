@@ -117,6 +117,25 @@
       "Placement": "Shared",
       "ReturnType": "global::System.Linq.IQueryable<global::mtg.AutotextsModule.IAutotext>",
       "ReturnTypeFullName": "System.Linq.IQueryable"
+    },
+    {
+      "Name": "GetAutotexts",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "usageAreaGuid",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "author",
+          "ParameterType": "global::Sungero.CoreEntities.IUser",
+          "ParameterTypeFullName": "Sungero.CoreEntities.IUser, Sungero.Domain.Shared"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Linq.IQueryable<global::mtg.AutotextsModule.IAutotext>",
+      "ReturnTypeFullName": "System.Linq.IQueryable"
     }
   ],
   "PublicStructures": [],

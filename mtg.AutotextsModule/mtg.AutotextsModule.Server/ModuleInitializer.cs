@@ -41,13 +41,20 @@ namespace mtg.AutotextsModule.Server
       
     }
     
-    
+    /// <summary>
+    /// Создание области использования
+    /// </summary>
     public static void CreateUsageAreas()
     {
       InitializationLogger.Debug("Init: Create usage areas.");
       CreateUsageArea(Resources.ApprovalTaskUsageAreaName, mtg.AutotextsModule.PublicConstants.Module.UsageAreaGuid.ApprovalTaskUsageArea);
     }
     
+    /// <summary>
+    /// Создание области использования
+    /// </summary>
+    /// <param name="name">Наименование</param>
+    /// <param name="guid">Идентификатор</param>
     public static void CreateUsageArea(string name, string guid)
     {
       InitializationLogger.DebugFormat("Init: Create AutotextUsageArea {0}", name);
@@ -68,7 +75,6 @@ namespace mtg.AutotextsModule.Server
           usageArea.Name = name;
           usageArea.Save();
         }
-        
       }
     }
     
@@ -85,7 +91,9 @@ namespace mtg.AutotextsModule.Server
       
       // Модуль "Автотексты".
       AutotextsModule.Autotexts.AccessRights.Grant(role, DefaultAccessRightsTypes.Read);
+      AutotextsModule.Autotexts.AccessRights.Save();
       AutotextsModule.AutotextUsageAreas.AccessRights.Grant(role, DefaultAccessRightsTypes.Read);
+      AutotextsModule.AutotextUsageAreas.AccessRights.Save();
     }
     
     /// <summary>
@@ -101,7 +109,9 @@ namespace mtg.AutotextsModule.Server
       
       // Модуль "Автотексты".
       AutotextsModule.Autotexts.AccessRights.Grant(role, DefaultAccessRightsTypes.Create);
+      AutotextsModule.Autotexts.AccessRights.Save();
       AutotextsModule.AutotextUsageAreas.AccessRights.Grant(role, DefaultAccessRightsTypes.Read);
+      AutotextsModule.AutotextUsageAreas.AccessRights.Save();
     }
   }
 }
